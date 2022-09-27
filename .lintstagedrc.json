@@ -1,5 +1,5 @@
 {
 	"*.{ts,tsx}":[
-		"eslinbt 'src/**' --fix"
+		"eslint 'src/**' --fix"
 	]
 }
