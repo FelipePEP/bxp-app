@@ -1,4 +1,4 @@
-export type MagicWeaponModel = {
+export type WeaponModel = {
   pts: number
   description: string
   level: number

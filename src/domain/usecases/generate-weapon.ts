@@ -1,9 +1,9 @@
-import { MagicWeaponModel } from '../models/magic-weapon-model'
+import { WeaponModel } from '../models/weapon-model'
 
 type generateWeaponParams = {
   level: number
 }
 
 export interface IgenerateWeapon {
-  randomize (params: generateWeaponParams): MagicWeaponModel
+  randomize (params: generateWeaponParams): Promise<WeaponModel>
 }
