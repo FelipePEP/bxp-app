@@ -1,6 +1,6 @@
 export type MagicWeaponModel = {
-  mmPts: number
-  about: string
+  pts: number
+  description: string
   level: number
   name: string
   type: string
@@ -10,4 +10,4 @@ export type MagicWeaponModel = {
   slots: number
   powers: [string]
   price: number
-}
+};
