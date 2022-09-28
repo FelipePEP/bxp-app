@@ -1,9 +1,11 @@
 import { WeaponModel } from '../models/weapon-model'
 
-type generateWeaponParams = {
-  level: number
+export namespace GenerateWeapon {
+  export type model = WeaponModel
+  export type params = {
+    level: number
+  }
 }
-
-export interface IgenerateWeapon {
-  randomize (params: generateWeaponParams): Promise<WeaponModel>
+export interface GenerateWeapon {
+  randomize (params: GenerateWeapon.params): Promise<WeaponModel>
 }

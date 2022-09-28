@@ -16,7 +16,7 @@ describe('Generate random wapon', () => {
   test('Should call correct URL with HttpPostClient', async () => {
     const url = 'bar'
     const { sut, httpPostClientSpy } = makeSut(url)
-    await sut.generateWeapon()
+    await sut.randomize(null)
     expect(httpPostClientSpy.url).toBe(url)
   })
 })
