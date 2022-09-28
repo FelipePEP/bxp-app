@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/FelipePEP/bxp-app#readme",
   "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
     "@types/faker": "^6.6.9",
     "@types/jest": "^29.0.3",
     "@types/node": "^18.7.21",
