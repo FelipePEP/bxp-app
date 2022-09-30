@@ -1,6 +1,6 @@
 import { WeaponModel } from '@/domain/models/weapon-model'
-import { GenerateWeapon } from '../../../domain/usecases/generate-weapon'
-import { HttpPostClient } from '../../protocols/http/http-post-client'
+import { GenerateWeapon } from '@/domain/usecases/generate-weapon'
+import { HttpPostClient } from '@/data/protocols/http/http-post-client'
 
 export class RemoteGenerateWeapon implements GenerateWeapon {
   constructor (

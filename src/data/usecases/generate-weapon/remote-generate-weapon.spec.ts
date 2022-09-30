@@ -1,5 +1,5 @@
-import { HttpPostClientSpy } from '../../mock/mock-http-client'
-import { RemoteGenerateWeapon } from './remote-generate-weapon'
+import { HttpPostClientSpy } from '@/data/mock/mock-http-client'
+import { RemoteGenerateWeapon } from '@/data/usecases/generate-weapon/remote-generate-weapon'
 import { faker } from '@faker-js/faker'
 
 type SutTypes = {

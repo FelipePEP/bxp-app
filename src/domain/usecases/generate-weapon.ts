@@ -1,4 +1,4 @@
-import { WeaponModel } from '../models/weapon-model'
+import { WeaponModel } from '@/domain/models/weapon-model'
 
 export namespace GenerateWeapon {
   export type model = WeaponModel
