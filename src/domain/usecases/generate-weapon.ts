@@ -3,7 +3,7 @@ import { WeaponModel } from '../models/weapon-model'
 export namespace GenerateWeapon {
   export type model = WeaponModel
   export type params = {
-    level: number
+    level?: number
   }
 }
 export interface GenerateWeapon {

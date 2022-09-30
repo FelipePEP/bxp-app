@@ -7,9 +7,9 @@ type SutTypes = {
   httpPostClientSpy: HttpPostClientSpy
 }
 
-const makeSut = (url: string = faker.internet.url()): SutTypes => {
+const makeSut = (params: any = { url: faker.internet.url() }): SutTypes => {
   const httpPostClientSpy = new HttpPostClientSpy()
-  const sut = new RemoteGenerateWeapon(url, httpPostClientSpy)
+  const sut = new RemoteGenerateWeapon(params.url, httpPostClientSpy)
   return { sut, httpPostClientSpy }
 }
 
