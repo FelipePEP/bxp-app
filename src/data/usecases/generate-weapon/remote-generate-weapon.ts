@@ -11,7 +11,8 @@ export class RemoteGenerateWeapon implements GenerateWeapon {
   async randomize (params: GenerateWeapon.params): Promise<GenerateWeapon.model> {
     let weapon: WeaponModel
     await this.httpPostClient.post({
-      url: this.url
+      url: this.url,
+      body: params
     })
     return weapon
   }

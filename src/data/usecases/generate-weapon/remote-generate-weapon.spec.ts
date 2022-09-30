@@ -1,4 +1,4 @@
-import { HttpPostClientSpy } from '../../test/mock-http-client'
+import { HttpPostClientSpy } from '../../mock/mock-http-client'
 import { RemoteGenerateWeapon } from './remote-generate-weapon'
 import { faker } from '@faker-js/faker'
 
@@ -13,11 +13,19 @@ const makeSut = (params: any = { url: faker.internet.url() }): SutTypes => {
   return { sut, httpPostClientSpy }
 }
 
-describe('Generate random wapon', () => {
+describe('Generate random weapon', () => {
   test('Should call correct URL with HttpPostClient', async () => {
     const url = faker.internet.url()
-    const { sut, httpPostClientSpy } = makeSut(url)
+    const { sut, httpPostClientSpy } = makeSut({url: url})
     await sut.randomize(null)
     expect(httpPostClientSpy.url).toBe(url)
   })
+
+  test('Should call correct URL with HttpPostClient and correct body', async () => {
+    const body = { level: parseInt(faker.random.numeric()) }
+    const { sut, httpPostClientSpy } = makeSut()
+    await sut.randomize(body)
+    expect(httpPostClientSpy.body).toBe(body)
+  })
 })
+
