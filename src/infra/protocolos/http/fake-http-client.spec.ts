@@ -7,7 +7,7 @@ describe('FakeHttpClient', () => {
     return { sut }
   }
 
-  test('Should call correct URL with HttpPostClient and correct body', async () => {
+  test('Should request return correct object', async () => {
     const params = { url: faker.internet.url(), body: null }
     const { sut } = makeSut(params, null)
     const promise = sut.post(params)
