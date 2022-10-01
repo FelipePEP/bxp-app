@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "start": "webpack-dev-server --open",
+    "test": "jest --passWithNoTests --no-cache",
     "test:watch": "npm test -- --watch",
     "test:staged": "npm tst -- --findRelatedTests",
     "test:ci": "npm test -- --coverage"
