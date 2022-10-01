@@ -30,8 +30,8 @@ describe('Generate random weapon', () => {
     const { sut, httpPostClientSpy } = makeSut()
     await sut.randomize(body)
     expect(httpPostClientSpy.body).toBe(body)
-  }
-  )
+  })
+
   test('Should throw InvalidParamsError if HttpPostClient returns 400', async () => {
     const { sut, httpPostClientSpy } = makeSut()
     httpPostClientSpy.response = {
