@@ -1,3 +1,5 @@
+import { WeaponFeatureModel } from "./weapon-feature-model";
+
 export type WeaponModel = {
   pts: number
   description: string
@@ -6,8 +8,7 @@ export type WeaponModel = {
   type: string
   quality: string
   classRestricted: string
-  attack: number
-  slots: number
-  powers: [string]
+  baseAttack: number  
+  features: [WeaponFeatureModel]
   price: number
 };
