@@ -1,5 +1,5 @@
 const path = require('path')
-const { CleanWebPackPlugin } = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -9,7 +9,7 @@ module.exports = {
     publicPath: '/public/js',
     filename: 'bundle.js'
   },
-  resolve:{
+  resolve: {
     extensions: ['.ts', '.tsx', '.js', 'scss'],
     alias: {
       '@': path.join(__dirname, 'src')
@@ -35,9 +35,11 @@ module.exports = {
 
     }]
   },
-  deveServer: {
-    contentBase: './public',
-    writeToDisk: true,
+  devServer: {
+    devMiddleware: {
+      writeToDisk: true
+    },
+    static: './public',
     historyApiFallback: true
   },
   externals: {
@@ -45,7 +47,7 @@ module.exports = {
     'react-dom': 'ReactDOM'
   },
   plugins: [
-    new CleanWebPackPlugin()
+    new CleanWebpackPlugin()
   ]
 
 }
