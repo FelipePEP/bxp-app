@@ -1,0 +1,26 @@
+@import "../../styles/theme.scss";
+
+
+.gridmenu {
+    display: grid;    
+    grid-template-columns: auto auto auto; 
+    background-color: $color-darkest;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+    .gridmenu {
+        grid-template-columns: auto auto; 
+    }
+}
+@media only screen and (max-width: 600px) {
+    .gridmenu {
+        grid-template-columns: auto; 
+    }
+}
+
+
+
+
+
+

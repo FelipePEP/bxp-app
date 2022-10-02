@@ -1,0 +1,25 @@
+@import "../../styles/theme.scss";
+
+.card {
+  background-color: $color-dark;
+  opacity: 0.8;
+  border: 1px solid $color-darkest;
+  padding: 20px;
+  cursor: pointer; 
+
+  & button { 
+    color: $color-lightest;
+    font-size: 30px;
+    font-family: $font-important;
+    text-align: center;
+    background: none;  
+    border: none;
+  }
+  
+  &:hover{
+    background-color: $color-lightest;    
+    & button{
+      color: $color-darkest;
+    }
+  }
+}
