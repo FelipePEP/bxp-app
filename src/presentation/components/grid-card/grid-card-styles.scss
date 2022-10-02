@@ -6,16 +6,17 @@
   border: 1px solid $color-darkest;
   padding: 20px;
   cursor: pointer; 
+  text-align: center;
 
   & button { 
     color: $color-lightest;
     font-size: 30px;
     font-family: $font-important;
-    text-align: center;
+    
     background: none;  
     border: none;
   }
-  
+
   &:hover{
     background-color: $color-lightest;    
     & button{

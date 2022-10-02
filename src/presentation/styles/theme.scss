@@ -1,14 +1,18 @@
-
-*{
-    font-family: 'Roboto', sans-serif;
-}
-
 $font-important: 'Alegreya sc';
+$font-secondary: 'Roboto';
 
 $color-darkest: #540804;
 $color-dark: #81171B;
 $color-base: #AD2E24;
 $color-light: #C75146;
 $color-lightest: #EA8C55;
+
 $color-contrast-dark: #FFFFFF;
 $color-contrast-light: #000000;
+
+*{
+    font-family: $font-secondary, sans-serif;
+}
+html {
+  background-color: $color-darkest;
+}
