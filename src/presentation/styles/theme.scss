@@ -16,3 +16,9 @@ $color-contrast-light: #000000;
 html {
   background-color: $color-darkest;
 }
+a {text-decoration: none;}
+
+h1{
+    color: $color-lightest;
+    font-family: $font-important;
+}

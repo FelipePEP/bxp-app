@@ -1,17 +1,17 @@
-import { WeaponModel } from '@/domain/models/weapon-model'
-import { GenerateWeapon } from '@/domain/usecases/generate-weapon'
+import { itemModel } from '@/domain/models/item-model'
+import { GenerateItem } from '@/domain/usecases/generate-item'
 import { HttpPostClient } from '@/data/protocols/http/http-post-client'
 import { HttpStatusCode } from '@/data/protocols/http/http-response'
 import { InvalidParamsError } from '@/domain/error/invalid-params'
 
-export class RemoteGenerateWeapon implements GenerateWeapon {
+export class RemoteGenerateItem implements GenerateItem {
   constructor (
     private readonly url: string,
-    private readonly httpPostClient: HttpPostClient<GenerateWeapon.params, WeaponModel>
+    private readonly httpPostClient: HttpPostClient<GenerateItem.params, itemModel>
   ) {}
 
-  async randomize (params: GenerateWeapon.params): Promise<GenerateWeapon.model> {
-    let weapon: WeaponModel
+  async randomize (params: GenerateItem.params): Promise<GenerateItem.model> {
+    let item: itemModel
     const response = await this.httpPostClient.post({
       url: this.url,
       body: params
@@ -21,7 +21,7 @@ export class RemoteGenerateWeapon implements GenerateWeapon {
       case HttpStatusCode.badRequest:
         throw new InvalidParamsError()
       default:
-        return weapon
+        return item
     }
   }
 }

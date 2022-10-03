@@ -1,23 +1,23 @@
 import { HttpPostClientSpy } from '@/data/mock/mock-http-client'
 import { HttpStatusCode } from '@/data/protocols/http/http-response'
-import { RemoteGenerateWeapon } from '@/data/usecases/generate-weapon/remote-generate-weapon'
+import { RemoteGenerateItem } from '@/data/usecases/generate-item/remote-generate-item'
 import { InvalidParamsError } from '@/domain/error/invalid-params'
-import { WeaponModel } from '@/domain/models/weapon-model'
-import { GenerateWeapon } from '@/domain/usecases/generate-weapon'
+import { itemModel } from '@/domain/models/item-model'
+import { GenerateItem } from '@/domain/usecases/generate-item'
 import { faker } from '@faker-js/faker'
 
 type SutTypes = {
-  sut: RemoteGenerateWeapon
-  httpPostClientSpy: HttpPostClientSpy<GenerateWeapon.params, WeaponModel>
+  sut: RemoteGenerateItem
+  httpPostClientSpy: HttpPostClientSpy<GenerateItem.params, itemModel>
 }
 
 const makeSut = (params: any = { url: faker.internet.url() }): SutTypes => {
-  const httpPostClientSpy = new HttpPostClientSpy<GenerateWeapon.params, WeaponModel>()
-  const sut = new RemoteGenerateWeapon(params.url, httpPostClientSpy)
+  const httpPostClientSpy = new HttpPostClientSpy<GenerateItem.params, itemModel>()
+  const sut = new RemoteGenerateItem(params.url, httpPostClientSpy)
   return { sut, httpPostClientSpy }
 }
 
-describe('Generate random weapon', () => {
+describe('Generate random item', () => {
   test('Should call correct URL with HttpPostClient', async () => {
     const url = faker.internet.url()
     const { sut, httpPostClientSpy } = makeSut({ url: url })

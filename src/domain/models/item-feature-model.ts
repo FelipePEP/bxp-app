@@ -1,4 +1,4 @@
-export type WeaponFeatureModel = {
+export type itemFeatureModel = {
   pts: number
   description: string
   level: number

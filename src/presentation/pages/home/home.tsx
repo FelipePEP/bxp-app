@@ -6,10 +6,10 @@ const Home: React.FC = () => {
   return (
     <>
       <div className={Styles.gridmenu}>
-        <GridCard>Arsenal</GridCard>
-        <GridCard>Demônio</GridCard>
-        <GridCard>Tesouro</GridCard>
-        <GridCard>Dungeon</GridCard>
+        <GridCard route="/item">Item</GridCard>
+        <GridCard route="/">Demônio</GridCard>
+        <GridCard route="/">Tesouro</GridCard>
+        <GridCard route="/">Dungeon</GridCard>
       </div>
     </>
   )

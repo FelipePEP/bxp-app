@@ -1,6 +1,6 @@
-import { WeaponFeatureModel } from "./weapon-feature-model";
+import { itemFeatureModel } from "./item-feature-model";
 
-export type WeaponModel = {
+export type itemModel = {
   pts: number
   description: string
   level: number
@@ -9,6 +9,6 @@ export type WeaponModel = {
   quality: string
   classRestricted: string
   baseAttack: number  
-  features: [WeaponFeatureModel]
+  features: [itemFeatureModel]
   price: number
 };
