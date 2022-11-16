@@ -2,17 +2,17 @@ import { HttpPostClientSpy } from '@/data/mock/mock-http-client'
 import { HttpStatusCode } from '@/data/protocols/http/http-response'
 import { RemoteGenerateItem } from '@/data/usecases/generate-item/remote-generate-item'
 import { InvalidParamsError } from '@/domain/error/invalid-params'
-import { itemModel } from '@/domain/models/item-model'
+import { ItemModel } from '@/domain/models/item-model'
 import { GenerateItem } from '@/domain/usecases/generate-item'
 import { faker } from '@faker-js/faker'
 
 type SutTypes = {
   sut: RemoteGenerateItem
-  httpPostClientSpy: HttpPostClientSpy<GenerateItem.params, itemModel>
+  httpPostClientSpy: HttpPostClientSpy<GenerateItem.params, ItemModel>
 }
 
 const makeSut = (params: any = { url: faker.internet.url() }): SutTypes => {
-  const httpPostClientSpy = new HttpPostClientSpy<GenerateItem.params, itemModel>()
+  const httpPostClientSpy = new HttpPostClientSpy<GenerateItem.params, ItemModel>()
   const sut = new RemoteGenerateItem(params.url, httpPostClientSpy)
   return { sut, httpPostClientSpy }
 }

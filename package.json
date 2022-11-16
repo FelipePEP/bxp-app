@@ -8,7 +8,8 @@
     "test": "jest --passWithNoTests --no-cache",
     "test:watch": "npm test -- --watch",
     "test:staged": "npm tst -- --findRelatedTests",
-    "test:ci": "npm test -- --coverage"
+    "test:ci": "npm test -- --coverage",
+    "build": "webpack --config=Scripts/config/webpack.prod.js"
   },
   "repository": {
     "type": "git",

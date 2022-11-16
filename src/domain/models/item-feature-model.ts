@@ -1,8 +1,8 @@
-export type itemFeatureModel = {
+export type ItemFeatureModel = {
+  id: number
   pts: number
   description: string
-  level: number
+  grad: number
   name: string
   value: string
-  equipeRestricted: string[]
 };

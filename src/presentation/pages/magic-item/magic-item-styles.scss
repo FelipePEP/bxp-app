@@ -1,0 +1,66 @@
+@import "../../styles/theme.scss";
+
+.breadcrumb{
+    font-style: italic;
+    font-family: $font-important;
+    color: $color-lightest;  
+    font-size: 14px;  
+    align-items: center;
+    
+}
+.card {
+    background-color: $color-dark;
+    opacity: 0.8;
+    border: 1px solid $color-darkest;
+    padding: 20px;
+    & label {
+        font-family: $font-important;
+        font-weight: bold;
+        color: $color-lightest;        
+    }
+    & select{
+        font-size: 20px;
+        background: $color-base;
+        color: $color-lightest;
+        border: none;        
+        width: 100%;
+        padding: 15px;
+        border-radius: 0.3rem;
+        &:focus-visible{ outline:none}
+        & option{ font-size: 14px;}        
+    }
+}
+.button {    
+    border: 1px solid $color-darkest;    
+    & button {        
+        font-weight: bold;
+        background-color: $color-lightest;
+        padding: 15px;
+        border: none;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        color: $color-darkest;
+        font-family: $font-important; 
+        font-size: 30px;
+        text-decoration: none;   
+        &.backButton{
+            color: $color-lightest;
+            background: none;
+            font-size: 24px;
+        }
+    }    
+}
+.itemwrapper {
+    background-color: $color-light;
+    padding: 10px;
+    border: 2px solid $color-darkest;
+    h1,h2{
+        color: $color-darkest;
+        font-family: $font-important;
+        border-bottom: 1px solid $color-darkest
+    }
+    h1 {
+        border-bottom: 2px solid $color-darkest
+    }
+}

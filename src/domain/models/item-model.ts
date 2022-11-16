@@ -1,14 +1,16 @@
-import { itemFeatureModel } from "./item-feature-model";
+import { ItemFeatureModel } from './item-feature-model'
 
-export type itemModel = {
-  pts: number
+export type ItemModel = {
   description: string
-  level: number
   name: string
   type: string
   quality: string
   classRestricted: string
-  baseAttack: number  
-  features: [itemFeatureModel]
+  features: ItemFeatureModel[]
   price: number
+  encumbrance: number
+  rarity: string
+  slots: number
+  armorType: string
+  weaponType: string
 };
